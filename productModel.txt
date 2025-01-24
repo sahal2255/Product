@@ -1,0 +1,100 @@
+{
+  "_id": "unique-product-id",
+  "name": "Almonds",
+  "category": "Dry Fruits", 
+  "description": "Premium quality California almonds, rich in nutrients and flavor.",
+  "images": [
+    "https://example.com/images/almonds1.jpg",
+    "https://example.com/images/almonds2.jpg"
+  ],
+  "variants": [
+    {
+      "variantType": "Raw",
+      "weights": [
+        {
+          "weight": "250g",
+          "price": 250.00,
+          "discountPercentage": 10,
+          "discountedPrice": 225.00
+        },
+        {
+          "weight": "500g",
+          "price": 480.00,
+          "discountPercentage": 10,
+          "discountedPrice": 432.00
+        },
+        {
+          "weight": "1kg",
+          "price": 900.00,
+          "discountPercentage": 10,
+          "discountedPrice": 810.00
+        }
+      ]
+    },
+    {
+      "variantType": "Roasted",
+      "weights": [
+        {
+          "weight": "250g",
+          "price": 280.00,
+          "discountPercentage": 10,
+          "discountedPrice": 252.00
+        },
+        {
+          "weight": "500g",
+          "price": 540.00,
+          "discountPercentage": 10,
+          "discountedPrice": 486.00
+        },
+        {
+          "weight": "1kg",
+          "price": 1000.00,
+          "discountPercentage": 10,
+          "discountedPrice": 900.00
+        }
+      ]
+    },
+    {
+      "variantType": "Salted",
+      "weights": [
+        {
+          "weight": "250g",
+          "price": 300.00,
+          "discountPercentage": 10,
+          "discountedPrice": 270.00
+        },
+        {
+          "weight": "500g",
+          "price": 580.00,
+          "discountPercentage": 10,
+          "discountedPrice": 522.00
+        },
+        {
+          "weight": "1kg",
+          "price": 1100.00,
+          "discountPercentage": 10,
+          "discountedPrice": 990.00
+        }
+      ]
+    }
+  ],
+  "nutritionalInfo": {
+    "calories": "576 per 100g",
+    "protein": "21g",
+    "carbohydrates": "20g",
+    "fats": "50g",
+    "fiber": "12g"
+  },
+  "origin": "California, USA",
+  "stock": {
+    "availability": true,
+    "quantity": 1000
+  },
+  "ratings": {
+    "averageRating": 4.5,
+    "reviewsCount": 120
+  },
+  "tags": ["healthy", "premium", "nuts", "almonds"],
+  "createdAt": "2025-01-15T10:00:00Z",
+  "updatedAt": "2025-01-15T10:00:00Z"
+}
