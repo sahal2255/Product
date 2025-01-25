@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 require('dotenv').config
 const dbConnect = async () => {
+  // The free tier of Vercel does not support environment variables (.env), which may cause issues with configuration and deployment.
   try {
     await mongoose.connect('mongodb+srv://sahalvv9656:31wBdmjPviqgt6jZ@cluster0.on2wm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
       useNewUrlParser: true,
@@ -15,5 +16,3 @@ const dbConnect = async () => {
 
 module.exports = dbConnect;
 
-
-// The free tier of Vercel does not support environment variables (.env), which may cause issues with configuration and deployment.
