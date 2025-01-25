@@ -2,7 +2,7 @@ const Menu = require("../model/items");
 
 const menuListing = async (req, res) => {
     console.log('hitting to the menu list controller');
-    const menuLists=await Menu.find()
+    const menuLists=await Menu.find({},{items:0})
     console.log('menulist ',menuLists)
   
     res.status(200).json({ success: true, menuLists });
@@ -38,7 +38,7 @@ const selectedMenuItems=async(req,res)=>{
         if(!menuItems){
             return res.status(404).json({ message: "Item not found" });
         }
-
+        res.status(200).json(menuItems)
     } catch (error) {
         console.log('error in the selected menu item controlller',error)   
     }
