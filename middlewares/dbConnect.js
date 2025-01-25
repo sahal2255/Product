@@ -1,12 +1,16 @@
-const mongoose=require('mongoose')
+const mongoose = require('mongoose');
 
-const dbConnect=async()=>{
-    try {
-        await mongoose.connect(process.env.MONGO_URL)
-        console.log('Mongodb Atlas Connected Successfully')
-    } catch (error) {
-       console.log('Mongodb Atlas Connection error',error) 
-    }
-}
+const dbConnect = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log('Database connected successfully');
+  } catch (error) {
+    console.error('Database connection failed:', error.message);
+    process.exit(1); // Exit the app if the DB connection fails
+  }
+};
 
-module.exports=dbConnect
+module.exports = dbConnect;
