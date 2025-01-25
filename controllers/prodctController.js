@@ -1,12 +1,10 @@
 const Menu = require("../model/items");
 
 
-const start=async(req,res)=>{
-    res.send()
-}
+
 const menuListing = async (req, res) => {
     console.log('hitting to the menu list controller');
-    const menuLists=await Menu.find({},{items:0})
+    const menuLists=await Menu.find()
     console.log('menulist ',menuLists)
   
     res.status(200).json({ success: true, menuLists });
