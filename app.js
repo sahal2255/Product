@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-app.get('/',productRoute)
+app.use('/',productRoute)
 
 
 
