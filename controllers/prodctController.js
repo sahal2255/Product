@@ -3,11 +3,31 @@ const Menu = require("../model/items");
 
 
 const menuListing = async (req, res) => {
-    console.log('hitting to the menu list controller');
-    const menuLists=await Menu.find()
-    console.log('menulist ',menuLists)
+    try {
+      console.log("Hitting the menu list controller");
   
-    res.status(200).json({ success: true, menuLists });
+      // Fetch all menu items from the database
+      const menuLists = await Menu.find();
+  
+    //   if (!menuLists || menuLists.length === 0) {
+    //     console.log("No menus found");
+    //     return res.status(404).json({ success: false, message: "No menus found" });
+    //   }
+  
+      console.log("Menu list retrieved successfully:", menuLists);
+  
+      // Send a success response with the menu list
+      res.status(200).json({ success: true, menuLists });
+    } catch (error) {
+      console.error("Error fetching menu list:", error.message);
+  
+      // Send an error response
+      res.status(500).json({
+        success: false,
+        message: "An error occurred while fetching the menu list",
+        error: error.message,
+  });
+}
   };
 
 const addMenuItems=async(req,res)=>{
