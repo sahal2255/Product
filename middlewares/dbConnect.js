@@ -14,3 +14,6 @@ const dbConnect = async () => {
 };
 
 module.exports = dbConnect;
+
+
+// The free tier of Vercel does not support environment variables (.env), which may cause issues with configuration and deployment.
